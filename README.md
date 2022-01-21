@@ -24,7 +24,7 @@ vi .env
 docker-compose up -d
 ```
 ### 2. Drone
-
+Drone 集成两种Runner（Docker Runner和SSH Runner）
 ```
 cd drone
 # 设置docker-compose.yml变量

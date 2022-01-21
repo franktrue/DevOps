@@ -11,7 +11,9 @@ services:
     environment:
       - TZ=Asia/Shanghai
     restart: always
-
+    networks:
+      - devops
+      
 networks:
   devops:
     external: true
