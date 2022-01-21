@@ -1,0 +1,17 @@
+version: '3'
+services:
+  gogs:
+    image: gogs/gogs:latest
+    container_name: gogs
+    ports:
+      - ${GOGS_PORT:-10300}:3000
+      - ${GOGS_SSH_PORT:-10022}:22
+    volumes:
+      - ./data:/data
+    environment:
+      - TZ=Asia/Shanghai
+    restart: always
+
+networks:
+  devops:
+    external: true
